@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Title</title>
+
+        <!-- 합쳐지고 최소화된 최신 CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <!-- 부가적인 테마 -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+        
+        
+        <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+
+        <%= stylesheet_link_tag   "application" %>
+
+
+    </head>
+    <body>
+
+        <%
+            container_class_name = "container-fluid"
+            row_name = "row"
+        %> <!-- -->
+
+    <div class="<%=container_class_name %>">
+
+        <div class="<%=row_name%>">  <!-- header -->
+
+            <div class = "col-xs-2">
+                <div class = "glyphicon glyphicon-arrow-left"></div>
+            </div>
+
+            <div class = "col-xs-8">
+                <a href = '/home/index'><img src = "<%=asset_path 'logo.png' %>" class="img-fluid" width="173.57" height="37.47"></a>
+            </div>
+
+            <div class = "col-xs-2">
+                <div class = "glyphicon glyphicon-menu-hamburger"></div>
+            </div>   <!-- end of header-->
+
+
+
+            <h1>회원정보</h1>
+
+            <div class="<%=row_name%>">
+                <div class="panel-body">
+                    <%= form_tag({controller: :sign , action: :signin}, method: 'post', class: "form-group") %>
+                        <div class="form-group">
+                            <div class="glyphicon glyphicon-user"></div>
+                            <input id="name" type="text" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <div class="glyphicon glyphicon-earphone"></div>
+                            <input  id="phnumber" type="text" placeholder="Phone number">
+                        </div>
+
+                        <div class="form-group">
+                            <div class="glyphicon glyphicon-envelope"></div>
+                            <input id ="email" type="email" placeholder="Example@mail.com">
+                        </div>
+
+                        <div class="form-group">
+                            <div class="glyphicon glyphicon-lock"></div>
+                            <input id = "pw" type="password" placeholder="Password">
+                        </div>
+
+                        <div class="form-group">
+                            <div class="glyphicon glyphicon-lock"></div>
+                            <input id="pwCheck" type="password" placeholder="Password check">
+                        </div>
+
+                        <div class="form-group">
+                            <%=button_tag "가입", type:"sbmit"%>
+                            <%=button_tag "취소", type:"reset"%>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    </body>
+</html>
