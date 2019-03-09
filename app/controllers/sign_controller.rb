@@ -1,4 +1,4 @@
 class SignController < ApplicationController
-  def siginin
+  def signin
   end
 end
