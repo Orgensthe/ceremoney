@@ -13,3 +13,87 @@
  *= require_tree .
  *= require_self
  */
+
+
+ body{
+    font-family: Apple SD Gothic Neo;
+    background-color: #22242b;
+    color: #6cbe59;
+    margin: 0;
+    padding: 0;
+
+}
+
+.container{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+
+
+}
+
+.row{
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+.col-xs-8{
+    display: inline-block;
+}
+
+.col-xs-2{
+    padding: 0;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.form-group{
+    color: #AAB0B7;
+    opacity: 0.82;
+    margin-top: 3px;
+    font-size: 12px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+
+input{
+    background-color: #2c2e35;
+    margin: 0;
+    padding: 10px;
+    border: 0px;
+    border-radius: 5px;
+    width: 80%;
+    height: 30px;
+    color: #AAB0B7;
+}
+
+input::placeholder{
+    color: #AAB0B7;
+}
+
+input:focus {
+    height: 43px;
+    outline: none;
+}
+
+button{
+    border: 0px;
+    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+    color: #ffffff;
+    background-color:  #6CBE59;
+    margin-top: 60px;
+}
+
+a{
+    color: #8b9aa0;
+
+}
+a:hover{
+    font-size: 18px;
+    color: #8b9aa0;
+}
